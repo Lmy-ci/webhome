@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f3ee" />
+  <meta name="description" content="一个可自定义的二次元个人主页" />
+  <title>Yume Archive · 个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">夢</span><span>YUME / ARCHIVE</span></a>
+    <nav><a href="#about">关于我</a><a href="#links">传送门</a><a href="#works">收藏夹</a></nav>
+    <div class="top-actions"><button class="icon-button" id="themeToggle" aria-label="切换主题">☼</button><button class="icon-button" id="settingsButton" aria-label="打开设置">⚙</button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero layout-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> PERSONAL FREQUENCY / 2026</div>
+        <h1>把日常，<em>收藏</em><br />成一页宇宙。</h1>
+        <p class="intro">你好，我是 <strong>Rin</strong>。一个在代码、插画和晚风之间往返的人。这里放着我的小世界、正在进行的计划，以及一些值得分享的链接。</p>
+        <div class="hero-cta"><a class="button primary" href="#about">探索档案 <span>↘</span></a><button class="button quiet" id="randomButton">随机一页 <span>✦</span></button></div>
+        <div class="micro-stats"><span><b id="visitCount">00128</b> 次访问</span><span><b>24°C</b> 杭州</span><span><b id="clock">00:00</b> 本地时间</span></div>
+      </div>
+      <div class="hero-art" aria-label="装饰插画">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="moon"><span>ゆ</span></div>
+        <div class="character-card"><div class="character-glow"></div><div class="character-face">◒</div><div class="character-line"></div><div class="character-name">night<br /><b>walker</b></div></div>
+        <div class="sticker sticker-one">KEEP<br />DREAMING</div><div class="sticker sticker-two"># 001</div>
+        <span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">✦</span>
+      </div>
+    </section>
+
+    <section class="ticker"><span>NOW PLAYING</span><div class="ticker-track"><span>夜の向こうへ — Aoi</span><span>✦</span><span>一緒に、ゆっくり生活する</span><span>✦</span><span>WELCOME TO MY LITTLE ARCHIVE</span></div><button id="musicToggle">▶</button></section>
+
+    <section class="content-grid">
+      <div class="main-column">
+        <section id="about" class="panel about-panel"><div class="section-heading"><span>01 / ABOUT</span><i>关于这个人</i></div><div class="about-content"><div class="avatar">凛</div><div><h2>你好，见到你很高兴。</h2><p>我喜欢把复杂的东西做得清楚，也喜欢给普通的日子留一点浪漫。现在主要在做前端开发、视觉实验和一些不太正经的 side project。</p><div class="tags"><span>⌁ Front-end</span><span>♡ Illustration</span><span>◌ Anime / Film</span><span>☕ Coffee</span></div></div></div></section>
+        <section id="links" class="panel links-panel"><div class="section-heading"><span>02 / PORTALS</span><i>常用传送门</i><button class="text-button" id="addLink">+ 自定义</button></div><div class="links-list" id="linksList"></div></section>
+        <section id="works" class="panel works-panel"><div class="section-heading"><span>03 / ON REPEAT</span><i>近期收藏</i><button class="text-button" id="shuffleWorks">换一批 ↻</button></div><div class="works-list"><article class="work-card"><div class="work-cover cover-a"><span>BLUE<br />HOUR</span></div><div><span class="label">FILM / 2024</span><h3>在蓝色时刻散步</h3><p>“有些风景，适合一个人慢慢看完。”</p></div><span class="arrow">↗</span></article><article class="work-card"><div class="work-cover cover-b"><span>海辺<br />日記</span></div><div><span class="label">PLAYLIST / 08</span><h3>晴天的海边日记</h3><p>给清晨、骑车和发呆的声音。</p></div><span class="arrow">↗</span></article></div></section>
+      </div>
+      <aside class="side-column"><section class="panel note-panel"><div class="section-heading"><span>NOTE / 07</span><i>最新公告</i></div><div class="note-date">2026.10.03 <span>SATURDAY</span></div><h2>秋天来了，记得<br /><em>带一件薄外套。</em></h2><p>最近在整理旧照片，也在给这个小站换一个新主题。如果你发现了有趣的东西，欢迎来找我聊天。</p><a class="under-link" href="mailto:hello@example.com">写信给我 →</a></section><section class="panel mood-panel"><div class="section-heading"><span>MOODBOARD</span><i>此刻状态</i></div><div class="mood-row"><div class="mood-icon">☾</div><div><strong>夜行模式</strong><small>listening to city pop</small></div><span class="equalizer"><i></i><i></i><i></i><i></i></span></div><div class="progress"><span></span></div><div class="player-meta"><span>04:12</span><span>09:36</span></div></section><section class="panel quote-panel"><span class="quote-mark">“</span><p>去成为你想成为的那个人。<br />慢一点也没关系。</p><span class="quote-author">— 夜航日志 / 02</span></section></aside>
+    </section>
+  </main>
+
+  <footer><span>© 2026 RIN'S ARCHIVE</span><span>MADE WITH <b>♡</b> &amp; TOO MUCH COFFEE</span><button id="backTop">BACK TO TOP ↑</button></footer>
+  <div class="settings-drawer" id="settingsDrawer"><div class="drawer-head"><span>自定义面板</span><button id="closeSettings">×</button></div><label>强调色<input type="color" id="accentPicker" value="#e85d4a" /></label><label>背景壁纸 URL<input type="url" id="wallpaperInput" placeholder="https://..." /></label><label>显示颗粒质感<input type="checkbox" id="grainToggle" checked /></label><button class="button primary" id="saveSettings">保存设置</button><p class="drawer-hint">设置保存在当前浏览器中，不会上传任何数据。</p></div><div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="toast" id="toast">已复制到剪贴板</div>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>
+
