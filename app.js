@@ -11,9 +11,3 @@ $('#themeToggle').onclick=()=>{document.body.classList.toggle('dark'); localStor
 $('#musicToggle').onclick=(e)=>{const b=e.currentTarget; b.textContent=b.textContent==='▶'?'Ⅱ':'▶'; toast(b.textContent==='Ⅱ'?'氛围音乐已开启（演示）':'音乐已暂停');};
 $('#randomButton').onclick=()=>{const targets=['#about','#links','#works']; document.querySelector(targets[Math.floor(Math.random()*targets.length)]).scrollIntoView({behavior:'smooth'});};
 $('#backTop').onclick=()=>scrollTo({top:0,behavior:'smooth'}); $('#shuffleWorks').onclick=()=>{document.querySelector('.cover-a').classList.toggle('cover-c'); toast('收藏夹已刷新');};
-function openDrawer(){ $('#settingsDrawer').classList.add('open'); $('#drawerBackdrop').classList.add('show'); } function closeDrawer(){ $('#settingsDrawer').classList.remove('open'); $('#drawerBackdrop').classList.remove('show'); }
-$('#settingsButton').onclick=openDrawer; $('#closeSettings').onclick=closeDrawer; $('#drawerBackdrop').onclick=closeDrawer;
-$('#saveSettings').onclick=()=>{document.documentElement.style.setProperty('--accent',$('#accentPicker').value); document.body.classList.toggle('no-grain',!$('#grainToggle').checked); const url=$('#wallpaperInput').value.trim(); if(url) document.body.style.setProperty('--wallpaper',`url(${url})`); localStorage.setItem('rin-accent',$('#accentPicker').value); toast('设置已保存'); closeDrawer();};
-const savedAccent=localStorage.getItem('rin-accent'); if(savedAccent){document.documentElement.style.setProperty('--accent',savedAccent);$('#accentPicker').value=savedAccent;}
-$('#addLink').onclick=()=>{const title=prompt('入口名称'); if(!title)return; const url=prompt('链接 URL','https://'); if(!url)return; config.links.push({icon:'↗',title,desc:'custom portal',url}); renderLinks(); toast('入口已添加');};
-
